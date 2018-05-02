@@ -23,13 +23,15 @@ def main(filename):
         for word in words:
             # then, remove (strip) unwanted punctuations from every word
             # "dream." => "dream"
-            word = word.strip()
-            word = word.strip(string.punctuation)
             
+            word = word.strip(string.punctuation)
+            if word:
+                # append the word to "all_words" list
+                all_words.append(word)
             # check if word is not empty
             
             # append the word to "all_words" list
-            all_words.append(word)
+            
 
     # compute word count from all_words
     from collections import Counter
